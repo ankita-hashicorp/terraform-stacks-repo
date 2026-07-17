@@ -11,3 +11,10 @@ resource "random_id" "random_id_24" {
         instance_type = "t3.micro"
     }
 }
+
+resource "random_id" "random_id_25" {
+    byte_length = 16
+    keepers = {
+        instance_type = "t3.micro"
+    }
+}
