@@ -14,5 +14,6 @@ component "stacks-tfpolicy" {
   }
 
   providers = {
+    random = provider.random.this
   }
 }
