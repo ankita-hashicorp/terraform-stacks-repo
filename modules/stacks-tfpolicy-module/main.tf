@@ -5,11 +5,24 @@ resource "random_id" "random_id_23" {
     }
 }
 
+resource "random_id" "random_id_24" {
+    byte_length = 16
+    keepers = {
+        instance_type = "t3.micro"
+    }
+}
+
 resource "random_id" "random_id_25" {
     byte_length = 16
     keepers = {
         instance_type = "t3.micro"
     }
+}
+
+resource "random_password" "db_password" {
+  length           = 16
+  special          = true
+  override_special = "!#$%&*()-_=+[]{}<>:?"
 }
 
 resource "random_shuffle" "az" {
