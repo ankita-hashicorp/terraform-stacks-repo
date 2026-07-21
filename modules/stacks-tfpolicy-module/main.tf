@@ -42,18 +42,18 @@ resource "random_pet" "custom_name_11" {
   separator = "_"
 }
 
-resource "random_password" "db_password_aa" {
+resource "random_password" "db_password_qa" {
   length           = 16
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
 }
 
-resource "random_shuffle" "az_b" {
+resource "random_shuffle" "az_ww" {
   input        = ["us-east-1a", "us-east-1b", "us-east-1c"]
   result_count = 1
 }
 
-resource "random_pet" "custom_name" {
+resource "random_pet" "custom_name_bb" {
   length    = 3
   prefix    = "prod"
   separator = "_"
