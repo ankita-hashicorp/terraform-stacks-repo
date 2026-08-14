@@ -1,18 +1,18 @@
-resource "random_id" "random_id_1" {
+resource "random_id" "random_id_5" {
     byte_length = 12
     keepers = {
         instance_type = "t2.micro"
     }
 }
 
-resource "random_id" "random_id_2" {
+resource "random_id" "random_id_6" {
     byte_length = 16
     keepers = {
         instance_type = "t3.micro"
     }
 }
 
-resource "random_id" "random_id_3" {
+resource "random_id" "random_id_7" {
     byte_length = 16
     keepers = {
         instance_type = "t3.micro"
@@ -25,7 +25,7 @@ resource "random_id" "random_id_4" {
     }
 }
 
-resource "random_password" "db_password_test_demo" {
+resource "random_password" "db_password_test_demo1" {
   length           = 16
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
@@ -36,14 +36,14 @@ resource "random_shuffle" "az_test" {
   result_count = 1
 }
 
-resource "random_pet" "custom_name_12" {
+resource "random_pet" "custom_name_13" {
   length    = 3
   prefix    = "prod"
   separator = "_"
 }
 
 resource "random_password" "db_password" {
-  length           = 16
+  length           = 10
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
 }
@@ -53,7 +53,7 @@ resource "random_shuffle" "az" {
   result_count = 1
 }
 
-resource "random_pet" "custom_b_name" {
+resource "random_pet" "custom_pet_name" {
   length    = 3
   prefix    = "prod"
   separator = "_"
