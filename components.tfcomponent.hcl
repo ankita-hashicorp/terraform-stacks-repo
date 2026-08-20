@@ -8,6 +8,7 @@ required_providers {
   aws = {
     source  = "hashicorp/aws"
     region = "ap-south-1"
+    version = "~> 5.0"
   }
 }
 
