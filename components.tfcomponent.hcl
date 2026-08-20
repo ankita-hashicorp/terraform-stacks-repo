@@ -4,6 +4,11 @@ required_providers {
     source  = "hashicorp/random"
     version = "~> 3.8.1"
   }
+    
+  aws = {
+    source  = "hashicorp/aws"
+    region = "ap-south-1"
+  }
 }
 
 provider "random" "this" {}
