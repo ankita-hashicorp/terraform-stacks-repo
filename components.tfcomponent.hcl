@@ -26,5 +26,6 @@ component "stacks-tfpolicy" {
 
   providers = {
     random = provider.random.this
+    aws = provider.aws.this
   }
 }
