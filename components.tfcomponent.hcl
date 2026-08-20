@@ -5,19 +5,15 @@ required_providers {
     version = "~> 3.8.1"
   }
     
-  # aws = {
-  #   source  = "hashicorp/aws"
-  #   version = "~> 5.0"
-  # }
+  aws = {
+    source  = "hashicorp/aws"
+    version = "~> 5.0"
+  }
 }
 
 provider "random" "this" {}
 
-# provider "aws" "this" {
-#   config {
-#     region = "ap-south-1"
-#   }
-# }
+provider "aws" "this" {}
 component "stacks-tfpolicy" {
   source = "./modules/stacks-tfpolicy-module"
 
@@ -26,6 +22,6 @@ component "stacks-tfpolicy" {
 
   providers = {
     random = provider.random.this
-    # aws = provider.aws.this
+    aws = provider.aws.this
   }
 }
