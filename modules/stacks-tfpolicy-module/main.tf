@@ -58,3 +58,66 @@ resource "random_pet" "custom_pet_name" {
   prefix    = "prod"
   separator = "_"
 }
+
+
+resource "aws_instance" "example_1" {
+  ami                         = "ami-0a1b2c3d4e5f00001"
+  instance_type               = "t3.micro"
+  availability_zone           = "eu-north-1a"
+  subnet_id                   = "subnet-0123456789abcdef01"
+  vpc_security_group_ids      = ["sg-0123456789abcdef01"]
+  key_name                    = "example-key-1"
+  iam_instance_profile        = "example-instance-profile-1"
+  associate_public_ip_address = true
+  monitoring                  = false
+  source_dest_check           = true
+
+  root_block_device {
+    volume_size = 8
+    volume_type = "gp2"
+    encrypted   = true
+  }
+
+  ebs_block_device {
+    device_name           = "/dev/sdh"
+    volume_size           = 20
+    delete_on_termination = true
+  }
+
+  tags = {
+    Name        = "example-instance-1"
+    Environment = "dev"
+    Owner       = "team-a"
+  }
+}
+
+resource "aws_instance" "example_2" {
+  ami                         = "ami-0a1b2c3d4e5f00002"
+  instance_type               = "t3.micro"
+  availability_zone           = "eu-north-1b"
+  subnet_id                   = "subnet-0123456789abcdef02"
+  vpc_security_group_ids      = ["sg-0123456789abcdef02"]
+  key_name                    = "example-key-2"
+  iam_instance_profile        = "example-instance-profile-2"
+  associate_public_ip_address = true
+  monitoring                  = false
+  source_dest_check           = true
+
+  root_block_device {
+    volume_size = 8
+    volume_type = "gp2"
+    encrypted   = true
+  }
+
+  ebs_block_device {
+    device_name           = "/dev/sdh"
+    volume_size           = 20
+    delete_on_termination = true
+  }
+
+  tags = {
+    Name        = "example-instance-2"
+    Environment = "dev"
+    Owner       = "team-a"
+  }
+}
