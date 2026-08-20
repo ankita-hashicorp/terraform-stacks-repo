@@ -13,7 +13,13 @@ required_providers {
 
 provider "random" "this" {}
 
-provider "aws" "this" {}
+provider "aws" "this" {
+  config {
+    region = "ap-south-1"
+    access_key = var.aws_access_key_id
+    secret_key = var.aws_secret_access_key
+  }
+}
 component "stacks-tfpolicy" {
   source = "./modules/stacks-tfpolicy-module"
 
