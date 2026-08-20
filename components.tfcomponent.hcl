@@ -12,6 +12,12 @@ required_providers {
 }
 
 provider "random" "this" {}
+
+provider "aws" "this" {
+  config {
+    region = "ap-south-1"
+  }
+}
 component "stacks-tfpolicy" {
   source = "./modules/stacks-tfpolicy-module"
 

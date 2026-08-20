@@ -1,3 +1,9 @@
+# Configure the AWS provider
+provider "aws" {
+  region = "ap-south-1"
+}
+
+
 resource "random_id" "random_id_5" {
     byte_length = 12
     keepers = {
