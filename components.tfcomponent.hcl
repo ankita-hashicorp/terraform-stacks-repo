@@ -32,3 +32,11 @@ component "stacks-tfpolicy" {
     aws = provider.aws.this
   }
 }
+
+component "vpc" {
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "~> 5.0" 
+  providers = {
+    aws = provider.aws.this
+  }
+}
