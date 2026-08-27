@@ -103,6 +103,7 @@ resource "aws_s3_bucket" "ankita-demo-bucket-test12" {
     Name        = "demo-bucket-test12"
     Environment = "dev"
     Owner       = "team-a"
+    owner       = "team"
   }
 }
 
@@ -112,6 +113,7 @@ resource "aws_s3_bucket" "ankita-demo-bucket-test23" {
     Name        = "demo-bucket-test23"
     Environment = "dev"
     Owner       = "team-a"
+    owner       = "team"
   }
 }
 
@@ -121,5 +123,6 @@ resource "aws_s3_bucket" "ankita-demo-bucket-test34" {
     Name        = "demo-bucket-test34"
     Environment = "dev"
     Owner       = "team-a"
+    owner       = "team"
   }
 }
