@@ -5,6 +5,18 @@ resource "random_id" "random_id_7" {
     }
 }
 
+module "vpc" {
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "~> 5.0" 
+
+  name = "my-application-vpc"
+
+  tags = {
+    Environment = "production"
+    Terraform   = "true"
+  }
+}
+
 resource "random_password" "db_password_test_demo1" {
   length           = 16
   special          = true
