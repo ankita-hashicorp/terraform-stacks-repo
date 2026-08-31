@@ -1,6 +1,6 @@
 store "varset" "aws_credentials_ankita" {
-  # id = "varset-GfXCxoZaukWgTNi4" //staging
-  id = "varset-oyHEE28rsBpVn5Hy" //prod
+  id = "varset-GfXCxoZaukWgTNi4" //staging
+  # id = "varset-oyHEE28rsBpVn5Hy" //prod
   category = "env"
 }
 
