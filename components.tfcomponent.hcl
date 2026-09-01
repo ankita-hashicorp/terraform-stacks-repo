@@ -19,7 +19,15 @@ provider "aws" "this" {
     access_key = var.aws_access_key_id
     secret_key = var.aws_secret_access_key
     token = var.aws_session_token
+    default_tags {
+      tags = {
+        Environment = var.environment_name
+        Deployment  = "terraform-stacks"
+        Region      = "ap-south-1"
+      }
+    }
   }
+  
 }
 component "stacks-tfpolicy" {
   source = "./modules/stacks-tfpolicy-module"
