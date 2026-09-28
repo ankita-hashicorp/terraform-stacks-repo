@@ -1,4 +1,4 @@
-resource "random_id" "random_id_7" {
+resource "random_id" "random_id_8" {
     byte_length = 12
     keepers = {
         instance_type = "t2.micro"
@@ -17,7 +17,7 @@ module "vpc" {
   }
 }
 
-resource "random_password" "db_password_test_demo1" {
+resource "random_password" "db_password_test_demo" {
   length           = 16
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
@@ -28,7 +28,7 @@ resource "random_shuffle" "az_test" {
   result_count = 1
 }
 
-resource "random_pet" "custom_name_13" {
+resource "random_pet" "custom_name_12" {
   length    = 3
   prefix    = "prod"
   separator = "_"
