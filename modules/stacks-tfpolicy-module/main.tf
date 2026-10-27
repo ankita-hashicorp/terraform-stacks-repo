@@ -33,12 +33,12 @@ resource "random_pet" "custom_name_12" {
   prefix    = "prod"
   separator = "_"
   keepers = {
-    stable ="v3"
+    stable ="v4"
   }
 }
 
 resource "random_string" "random_string_12" {
-  length  = 8
+  length  = 18
   special = true
 }
 
