@@ -33,7 +33,7 @@ resource "random_pet" "custom_name_12" {
   prefix    = "prod"
   separator = "_"
   keepers = {
-    stable ="v2"
+    stable ="v3"
   }
 }
 
