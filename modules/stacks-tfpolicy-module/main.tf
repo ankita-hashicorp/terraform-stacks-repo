@@ -37,6 +37,12 @@ resource "random_pet" "custom_name_12" {
   }
 }
 
+resource "random_string" "random_string_12" {
+  length  = 8
+  special = true
+}
+
+
 # resource "aws_instance" "example_1" {
 #   ami                         = "ami-0a1b2c3d4e5f00001"
 #   instance_type               = "t3.micro"
