@@ -1,8 +1,8 @@
 store "varset" "aws_credentials_ankita" {
   # id = "varset-GfXCxoZaukWgTNi4" //staging
-  id = "varset-oyHEE28rsBpVn5Hy" //prod
+  # id = "varset-oyHEE28rsBpVn5Hy" //prod
   # id = "varset-JrmjbtAncmurJoDp" //TFE
-  # id = "varset-FJ6worvmpyu3UpfA" //local
+  id = "varset-3HFku4F4P8RzKu3F" //local
   category = "env"
 }
 
