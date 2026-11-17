@@ -17,11 +17,10 @@ resource "random_id" "random_id_8" {
 #   }
 # }
 
-resource "random_password" "db_password_test_demo" {
-  length           = 16
-  special          = true
-  override_special = "!#$%&*()-_=+[]{}<>:?"
-}
+# resource "random_password" "db_password_test_demo" {
+#   length           = 16
+#   special          = true
+# }
 
 resource "random_shuffle" "az_test" {
   input        = ["us-east-1a", "us-east-1b", "us-east-1c"]
