@@ -1,0 +1,31 @@
+
+required_providers {
+  random = {
+    source  = "hashicorp/random"
+    version = "~> 3.8.1"
+  }
+    
+  aws = {
+    source  = "hashicorp/aws"
+    version = "~> 5.0"
+  }
+}
+
+provider "random" "this" {}
+
+provider "aws" "this" {
+  config {
+    region = "ap-south-1"
+    access_key = var.aws_access_key_id
+    secret_key = var.aws_secret_access_key
+    token = var.aws_session_token
+    default_tags {
+      tags = {
+        Environment = var.environment_name
+        Deployment  = "terraform-stacks"
+        Region      = "ap-south-1"
+      }
+    }
+  }
+  
+}
