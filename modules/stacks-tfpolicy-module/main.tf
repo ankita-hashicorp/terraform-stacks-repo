@@ -1,9 +1,34 @@
-resource "random_id" "random_id_8" {
-    byte_length = 12
-    keepers = {
-        instance_type = "t2.micro"
-    }
+# Configure the AWS provider
+provider "aws" {
+  region = "ap-south-1"
 }
+
+//create resource block for aws s3 bucket
+# resource "aws_s3_bucket" "ankita-demo-bucket-test12" {
+#   bucket = "ankita-demo-bucket-test12"
+#   tags = {
+#     Name        = "demo-bucket-test12"
+#     Environment = "dev"
+#     Owner       = "team-a"
+#   }
+# }
+
+# resource "aws_s3_bucket" "ankita-demo-bucket-test23" {
+#   bucket = "ankita-demo-bucket-test23"
+#   tags = {
+#     Name        = "demo-bucket-test23"
+#     Environment = "dev"
+#     Owner       = "team-a"
+#   }
+# }
+# resource "aws_s3_bucket" "ankita-demo-bucket-test34" {
+#   bucket = "ankita-demo-bucket-test34"
+#   tags = {
+#     Name        = "demo-bucket-test34"
+#     Environment = "dev"
+#     Owner       = "team-a"
+#   }
+# }
 
 # module "vpc" {
 #   source  = "terraform-aws-modules/vpc/aws"
@@ -17,10 +42,26 @@ resource "random_id" "random_id_8" {
 #   }
 # }
 
-# resource "random_password" "db_password_test_demo" {
-#   length           = 16
-#   special          = true
-# }
+resource "random_id" "random_id_34" {
+    byte_length = 8
+    keepers = {
+        instance_type = "t2.micro"
+    }
+}
+
+resource "random_id" "random_id_14" {
+    byte_length = 12
+    keepers = {
+        instance_type = "t2.micro"
+    }
+}
+
+resource "random_id" "random_id_25" {
+    byte_length = 16
+    keepers = {
+        instance_type = "t3.micro"
+    }
+}
 
 resource "random_shuffle" "az_test" {
   input        = ["us-east-1a", "us-east-1b", "us-east-1c"]
@@ -32,15 +73,14 @@ resource "random_pet" "custom_name_12" {
   prefix    = "prod"
   separator = "_"
   keepers = {
-    stable ="v4"
+    stable ="v3"
   }
 }
 
 resource "random_string" "random_string_12" {
-  length  = 18
+  length  = 8
   special = true
 }
-
 
 # resource "aws_instance" "example_1" {
 #   ami                         = "ami-0a1b2c3d4e5f00001"
@@ -101,36 +141,5 @@ resource "random_string" "random_string_12" {
 #     Name        = "example-instance-2"
 #     Environment = "dev"
 #     Owner       = "team-a"
-#   }
-# }
-
-# //create resource block for aws s3 bucket
-# resource "aws_s3_bucket" "ankita-demo-bucket-test12" {
-#   bucket = "ankita-demo-bucket-test12"
-#   tags = {
-#     Name        = "demo-bucket-test12"
-#     Environment = "dev"
-#     Owner       = "team-a"
-#     owner       = "team"
-#   }
-# }
-
-# resource "aws_s3_bucket" "ankita-demo-bucket-test23" {
-#   bucket = "ankita-demo-bucket-test23"
-#   tags = {
-#     Name        = "demo-bucket-test23"
-#     Environment = "dev"
-#     Owner       = "team-a"
-#     owner       = "team"
-#   }
-# }
-
-# resource "aws_s3_bucket" "ankita-demo-bucket-test34" {
-#   bucket = "ankita-demo-bucket-test34"
-#   tags = {
-#     Name        = "demo-bucket-test34"
-#     Environment = "dev"
-#     Owner       = "team-a"
-#     owner       = "team"
 #   }
 # }
