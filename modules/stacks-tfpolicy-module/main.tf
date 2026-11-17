@@ -1,8 +1,3 @@
-# Configure the AWS provider
-provider "aws" {
-  region = "ap-south-1"
-}
-
 //create resource block for aws s3 bucket
 # resource "aws_s3_bucket" "ankita-demo-bucket-test12" {
 #   bucket = "ankita-demo-bucket-test12"
